@@ -74,7 +74,7 @@ public class Player {
     )
     private Integer karmaPoints;
 
-    @Column(nullable = false)
+    @Column(name = "total_xp", nullable = false)
     @Min(value = 0, message = "La experiencia no pueden ser negativa.")
     @Schema(
             description = "Experiencia total acumulada por el jugador.",
