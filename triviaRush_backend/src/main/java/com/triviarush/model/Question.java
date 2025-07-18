@@ -1,6 +1,7 @@
 package com.triviarush.model;
 
 import com.triviarush.enums.Category;
+import com.triviarush.enums.Difficult;
 import com.triviarush.exception.CorrectAnswerNotOptionException;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
@@ -75,6 +76,17 @@ public class Question {
             nullable = false
     )
     private Category category;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    @Schema(
+            description = "Dificultad de la pregunta.",
+            example = "DIFICIL",
+            format = "Enum Dificult",
+            type = "Dificult",
+            nullable = false
+    )
+    private Difficult difficult;
 
     @PrePersist
     @PreUpdate

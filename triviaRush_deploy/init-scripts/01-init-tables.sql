@@ -22,7 +22,8 @@ CREATE TABLE IF NOT EXISTS questions (
     id UUID PRIMARY KEY,
     question VARCHAR(1000) NOT NULL UNIQUE,
     correct_answer VARCHAR(500) NOT NULL,
-    category VARCHAR(50) NOT NULL
+    category VARCHAR(50) NOT NULL,
+    difficult VARCHAR(10) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS question_options (
